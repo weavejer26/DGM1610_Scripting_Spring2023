@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Conditionals : MonoBehaviour
 {
-    
+    public string weather = "clear";
     int time = 304;
-    string weather = "clear";
     bool isStopLightRed = true;
     float gpa = 3.25f;
     double temperature = 101.45d;
