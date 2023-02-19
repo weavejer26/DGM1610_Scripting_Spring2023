@@ -6,12 +6,12 @@ public class EnemySpawnManager : MonoBehaviour
 {
     
     public GameObject[] enemyPrefabs;
-    
+
     [SerializeField]
-    private float spawnRangeX = 17.0f; 
+    private float spawnRangeX = 17.0f;
     [SerializeField]
     private float spawnPosZ;
-    
+
     private float startDelay = 2f;
     private float spawnInterval = 2f;
     
@@ -24,8 +24,8 @@ public class EnemySpawnManager : MonoBehaviour
 
     void SpawnRandomEnemy()
     {
-        //Generate a position to spawn at
-        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+        //Generate a position to spawn at on the x-axis
+        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX),0, spawnPosZ);
         //Pick a random enemy/ ufo from the array
         int enemyIndex = Random.Range(0,enemyPrefabs.Length);
         //Spawn the enemy indexed from the array

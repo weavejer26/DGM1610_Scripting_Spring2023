@@ -97,8 +97,8 @@ GameObject:
   - component: {fileID: 5501693675987317907}
   - component: {fileID: 5501693675987317906}
   - component: {fileID: 5501693675987317905}
-  - component: {fileID: 5501693675987317904}
   - component: {fileID: -7320512700924376365}
+  - component: {fileID: -2741431565575025334}
   m_Layer: 0
   m_Name: UFO_Runner
   m_TagString: Untagged
@@ -213,21 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c511c370a7810384e9a5679eeff0a300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
---- !u!114 &5501693675987317904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5501693675987317911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 200ca11b1aeed4b43b327be683c98bd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  topBounds: 30
-  lowerBounds: -10
+  speed: 12
 --- !u!114 &-7320512700924376365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,3 +226,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e9f13d357a9a2448632d05adbc0952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-2741431565575025334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5501693675987317911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200ca11b1aeed4b43b327be683c98bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topBounds: 50
+  lowerBounds: -10
