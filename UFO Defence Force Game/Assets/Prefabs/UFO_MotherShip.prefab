@@ -111,8 +111,11 @@ GameObject:
   - component: {fileID: 7355234921354599355}
   - component: {fileID: 4318834809366095062}
   - component: {fileID: 139447309895931731}
+  - component: {fileID: -9071047354182107432}
+  - component: {fileID: -1527869252511043765}
+  - component: {fileID: 3365613367004294483}
   m_Layer: 0
-  m_Name: MotherShip
+  m_Name: UFO_MotherShip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -213,6 +216,45 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-9071047354182107432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3694073399809038787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c511c370a7810384e9a5679eeff0a300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
+--- !u!114 &-1527869252511043765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3694073399809038787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e9f13d357a9a2448632d05adbc0952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3365613367004294483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3694073399809038787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200ca11b1aeed4b43b327be683c98bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topBounds: 50
+  lowerBounds: -10
 --- !u!1 &6254399272644907941
 GameObject:
   m_ObjectHideFlags: 0
