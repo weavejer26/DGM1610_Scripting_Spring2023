@@ -6,24 +6,27 @@ public class DestroyOutofBounds : MonoBehaviour
 {
     public float topBounds = 60.0f;
     public float lowerBounds = -10.0f;
+    public ScoreManager scoreManager; //Reference the score manager so that we can update the score
+    private DetectCollisions detectCollisions;
 
-    
-    void Awake()
+    //Start is called before the first frame update
+    void Start() 
     {
-        //Time.timeScale = 1;
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+        detectCollisions = GetComponent<DetectCollisions>();
     }
+    
     // Update is called once per frame
     void Update()
     {
-       if(transform.position.z > topBounds)
-       {
-            Destroy(gameObject);
-       } 
-       else if(transform.position.z < lowerBounds)
-       {
-            Debug.Log("Game Over!");
-            Destroy(gameObject);
-            //Time.timeScale = 0;
-       }
+     if(transform.position.z > topBounds)
+     {
+        Destroy(gameObject);
+     }
+     
+     else if(transform.position.z < lowerBounds)
+     {
+        scoreManager.DecreaseScore(detectCollisions.scoreToGive); //Everytime a UFO sneaks past the lower bounds deduct points
+     }
     }
 }
