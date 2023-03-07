@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
+
 {
   
   [SerializeField]
@@ -19,7 +20,7 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit(); //Quit Game
-        Debug.Log("You have quit the game, Goodbye!");
+        Debug.Log("You have quit the game, Goodbye!"); 
     }
 
 }
