@@ -11,6 +11,16 @@ public class PlayerController : MonoBehaviour
 
     public Transform blaster;
     public GameObject LaserBolt;
+    //Audio Variables
+    private AudioSource blasterAudio;
+    public AudioClip laserBlast;
+
+
+    void Start()
+    {
+        //GetAudioSource Component
+        blasterAudio = GetComponent<AudioSource>();
+    }
    
     // Update is called once per frame
     void Update()
@@ -31,10 +41,12 @@ public class PlayerController : MonoBehaviour
      {
         transform.position = new Vector3(xRange,transform.position.y, transform.position.z);
      }
+    
     // If spacebar is pressed fire LaserBolt
     if(Input.GetKeyDown(KeyCode.Space))
      {
     // Create LaserBolt at the blaster transform position maintaining the objects rotation.
+        blasterAudio.PlayOneShot(laserBlast,1.0f); //Play blasterAudio soundclip
         Instantiate(LaserBolt, blaster.transform.position, LaserBolt.transform.rotation);
      }
  

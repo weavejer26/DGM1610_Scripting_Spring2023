@@ -127,3 +127,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBounds: 60
   lowerBounds: -10
+  scoreManager: {fileID: 0}

@@ -27,6 +27,7 @@ public class DestroyOutofBounds : MonoBehaviour
      else if(transform.position.z < lowerBounds)
      {
         scoreManager.DecreaseScore(detectCollisions.scoreToGive); //Everytime a UFO sneaks past the lower bounds deduct points
+        Destroy(gameObject);
      }
     }
 }
