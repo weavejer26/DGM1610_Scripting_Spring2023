@@ -40,12 +40,12 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y); //Move Player Left and Right
 
         //If the player is moving right but facing left flip the player right
-        if(!isFacingRight && moveInput > 0)
+        if(isFacingRight && moveInput > 0)
         {
             FlipPlayer();
         }
         //If the player is moving left but facing right flip the player left
-        else if(isFacingRight && moveInput < 0);
+        else if(isFacingRight && moveInput < 0)
         {
             FlipPlayer();
         }
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
     //Update is called once per frame. we will use Update for the jump as we will need every frame
     void Update() 
     {
-       if(isGrounded) 
+        if(isGrounded)
         {
             doubleJump = true;
         }
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
             rb.velocity = Vector2.up * jumpForce; //Makes the Player jump
             doubleJump = false;
         }
-        else if (Input.GetKeyDown(KeyCode.Space) && !doubleJump && isGrounded)
+        else if(Input.GetKeyDown(KeyCode.Space) && !doubleJump && isGrounded)
         {
             rb.velocity = Vector2.up * jumpForce; //Apply force to Player making them jump
         }
