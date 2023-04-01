@@ -700,7 +700,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 758837804}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -993,6 +993,7 @@ GameObject:
   - component: {fileID: 1167331621}
   - component: {fileID: 1167331626}
   - component: {fileID: 1167331627}
+  - component: {fileID: 1167331628}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1014,12 +1015,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 8
+  isFacingRight: 1
   groundCheck: {fileID: 1183754504}
   checkRadius: 0.5
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  doubleJump: 0
+  doubleJump: 1
 --- !u!50 &1167331622
 Rigidbody2D:
   serializedVersion: 4
@@ -1164,6 +1166,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 0
+--- !u!114 &1167331628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167331620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34d61778776755479189786067a2420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startDelay: 1
+  attackPos: {fileID: 1476124994}
+  whatisEnemies:
+    serializedVersion: 2
+    m_Bits: 8
+  attackRange: 0.5
+  damage: 1
 --- !u!1 &1183754503
 GameObject:
   m_ObjectHideFlags: 0
@@ -1209,7 +1230,7 @@ GameObject:
   - component: {fileID: 1408692488}
   - component: {fileID: 1408692487}
   - component: {fileID: 1408692492}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1364,7 +1385,7 @@ GameObject:
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1376,7 +1397,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476124993}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.91, y: 0, z: 0}
+  m_LocalPosition: {x: 0.67, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

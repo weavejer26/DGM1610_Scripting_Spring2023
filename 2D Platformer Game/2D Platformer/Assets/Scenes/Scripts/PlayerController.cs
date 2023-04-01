@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     //Player RigidBody
     [Header("Player Rigidbody Component")]
     private Rigidbody2D rb;
-    private bool isFacingRight = true;
+    public bool isFacingRight = true;
 
     //Player Jump
     [Header("Jump Settings")]
@@ -21,7 +21,6 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatIsGround;
-
     public bool doubleJump;
     
     // Start is called before the first frame update
