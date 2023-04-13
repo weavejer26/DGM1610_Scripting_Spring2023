@@ -23,20 +23,35 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
     public bool doubleJump;
     
+    
+    [Header("Animations")]
+    private Animator playerAnim;
+    
     // Start is called before the first frame update
     void Start()
     {
       //Get Rigidbody Component Reference
       rb = GetComponent<Rigidbody2D>();  
+      playerAnim = GetComponent<Animator>();
     }
     
     //FIxed Update is called a fixed or set number of frames. This works best with physics based movement.
     void FixedUpdate()
     {
+        if(moveInput > 0 || moveInput < 0)
+        {
+            playerAnim.SetBool("IsWalking", true);
+        }
+        else 
+        {
+            playerAnim.SetBool("IsWalking", false);
+        }
+        
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround); //Define what is the ground
 
         moveInput = Input.GetAxis("Horizontal"); //Get the Horizontal Keybinding
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y); //Move Player Left and Right
+        
 
         //If the player is moving right but facing left flip the player right
         if(isFacingRight && moveInput > 0)
