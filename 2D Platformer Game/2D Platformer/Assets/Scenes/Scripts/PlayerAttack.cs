@@ -7,18 +7,10 @@ public class PlayerAttack : MonoBehaviour
    private float attackDelay;
    public float startDelay;
    public Transform attackPos;
-
    public LayerMask whatisEnemies;
    public float attackRange;
    public int damage;
     
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -48,8 +40,4 @@ public class PlayerAttack : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
-    
-
-
-
 }

@@ -63,31 +63,38 @@ public class PlayerController : MonoBehaviour
         {
             FlipPlayer();
         }
+    
+    void FlipPlayer()
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 scaler = transform.localScale; //Local variable that stores localscale value
+            scaler.x *= -1; //Flip the Sprite graphic
+            transform.localScale = scaler;
+        }
+    
     }
 
     //Update is called once per frame. we will use Update for the jump as we will need every frame
     void Update() 
     {
+        
         if(isGrounded)
         {
             doubleJump = true;
         }
+       
         if(Input.GetKeyDown(KeyCode.Space) && doubleJump)
         {
             rb.velocity = Vector2.up * jumpForce; //Makes the Player jump
             doubleJump = false;
+            playerAnim.SetTrigger("Jump_Trig");
         }
         else if(Input.GetKeyDown(KeyCode.Space) && !doubleJump && isGrounded)
         {
             rb.velocity = Vector2.up * jumpForce; //Apply force to Player making them jump
+            playerAnim.SetTrigger("Jump_Trig");
         }
     }
         
-    void FlipPlayer()
-    {
-        isFacingRight = !isFacingRight;
-        Vector3 scaler = transform.localScale; //Local variable that stores localscale value
-        scaler.x *= -1; //Flip the Sprite graphic
-        transform.localScale = scaler;
-    }
+  
 }
