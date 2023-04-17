@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 49a8acfbc56ef2c409c21bf49010c1c4
+guid: 3d337f0cd6224b748b04a23dd13c6746
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,55 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Snail_Jump1
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16445a484c10ecc4488734d02f37a334
-      internalID: 1262721583
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Snail_Jump2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 77ee0ea090ed54943be6e0b8e305eb36
-      internalID: 667425451
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Snail_Walk1
+      name: Spritee_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 64
-        height: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adbd6edfb7c3e6940a2c1a33e6cd933e
-      internalID: 1483290143
+      spriteID: ffcad52f23d4ea440b24a45804cfb143
+      internalID: -1212618343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snail_walk2
+      name: Spritee_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f88c089ae3971f44bc10359e0985e25
-      internalID: 1036784488
+      spriteID: 1b1279e438c973e4a8020dbecc4f9dfa
+      internalID: 1335206832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Snail_walk3
+      name: Spritee_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fc15e9d2a298584ca18ce4ca0dc8db3
-      internalID: 75115955
+      spriteID: 20dced9701be9f24cae7145a619bf5e5
+      internalID: -522096064
       vertices: []
       indices: 
       edges: []
@@ -220,11 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Snail_walk2: 1036784488
-      Snail_walk3: 75115955
-      Snail_Jump2: 667425451
-      Snail_Jump1: 1262721583
-      Snail_Walk1: 1483290143
+      Spritee_1: 1335206832
+      Spritee_2: -522096064
+      Spritee_0: -1212618343
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
