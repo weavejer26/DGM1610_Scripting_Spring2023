@@ -6,9 +6,7 @@ using UnityEngine;
 public enum PickupType
     {
         Health,
-        Ammo,
-    
-    
+        Ammo
     }
 
 public class Pickup : MonoBehaviour

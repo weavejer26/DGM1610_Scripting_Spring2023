@@ -34,10 +34,10 @@ public class PlayerController : MonoBehaviour
        camera = Camera.main;
        rb = GetComponent<Rigidbody>();
 
-       /* Initialize the UI
+       //Initialize the UI
        GameUI.instance.UpdateHealthBar(curHP, maxHP);
        GameUI.instance.UpdateScoreText(0);
-       GameUI.instance.UpdateAmmoText(weapon.curAmmo,weapon.maxAmmo); */
+       //GameUI.instance.UpdateAmmoText(weapon.curAmmo,weapon.maxAmmo);
     }
     
     void Move()
@@ -82,22 +82,22 @@ public class PlayerController : MonoBehaviour
         if(curHP <- 0)
         {
             Die();
-            //GameUI.instance.UpdateHealthBar(curHp, maxHp);
+            GameUI.instance.UpdateHealthBar(curHP, maxHP);
         }
      }
     
     //If Player health is reduced to zero or below the run Die()
     void Die()
      {
-        //GameManager.instance.LoseGame();
+        GameManager.instance.LoseGame();
         Debug.Log("Player has died! Game Over!");
         Time.timeScale = 0;
      }  
     
     public void Givehealth(int amountToGive)
      {
-        //curHP = Mathf.Clamp(curHP + amountToGive, 0, maxHP);
-        //GameUI.instance.UpdateHealthBar(curHP, maxHP);
+        curHP = Mathf.Clamp(curHP + amountToGive, 0, maxHP);
+        GameUI.instance.UpdateHealthBar(curHP, maxHP);
         Debug.Log("Player has been healed!");
      } 
 
@@ -128,10 +128,10 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
-        /* //Don't do anything if the game is paused
+        //Don't do anything if the game is paused
         if(GameManager.instance.gamePaused == true)
         {
             return;
-        } */
+        }
     }
 }
